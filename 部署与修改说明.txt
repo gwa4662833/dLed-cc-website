@@ -1,0 +1,29 @@
+DIED 网站部署包（Cloudflare Pages）
+================================
+
+文件：
+- index.html：网站首页，保留原有中英文切换与页面内容；已加入基础SEO元信息与canonical。
+- robots.txt：允许搜索引擎抓取并声明站点地图。
+- sitemap.xml：当前仅列首页；新增独立页面后需更新。
+
+重要：这不是已经上线的网站。需要你在自己的Cloudflare账户完成上传和域名授权。
+
+免费部署：
+1. 登录 https://dash.cloudflare.com/
+2. Workers & Pages -> Create -> Pages -> Direct Upload
+3. 创建项目并上传本文件夹内三个文件（不要上传zip本身，或先解压）。
+4. 项目部署成功后，打开项目 -> Custom domains，添加 www.died.cc。
+5. 如需根域名 died.cc，也添加为自定义域名，并设置跳转到 https://www.died.cc/。
+6. 只有在域名DNS按Cloudflare提示正确设置后，域名才会生效。修改Nameserver前先保留邮件MX/TXT等记录。
+
+后续修改：
+- 目前HTML内有 window.SITE_DATA 数据区（搜索“window.SITE_DATA”），可编辑品牌、联系方式、产品、案例及中英文文案。
+- 修改后重新上传/部署即可更新。
+- 这不是带登录账号的可视化CMS后台。若要网页后台登录后编辑，建议下一步接入GitHub + Decap CMS；需要创建GitHub仓库并授权，不能在未获你授权的情况下代为连接账户。
+
+上线前必须核对：
+- 联系表单目前是演示表单，不会真正发送询盘；需接入表单服务或后端。
+- 页面有若干“示例”数据（如年限、产品系列、项目数、满意度），请用真实且可证明的数据替换或删除。
+- 图片/视频仍引用第三方 doubaocdn 链接；需确认链接长期可访问并拥有使用权，建议后续迁移到自有资源。
+- 电话、邮箱、地址、二维码请确认准确且允许公开。
+- Google收录不等于排名；Search Console需由域名所有者自行验证并提交 sitemap。

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大极照明 DIED · 专业LED照明解决方案服务商 / Professional LED Lighting Solutions</title>
+<meta name="description" content="大极照明 DIED 提供商业照明、装饰照明与户外LED灯具及照明解决方案，面向零售、酒店、餐饮与项目客户。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.died.cc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="大极照明 DIED | LED Lighting Solutions">
+<meta property="og:description" content="商业、装饰与户外LED照明产品与整体方案。">
+<meta property="og:url" content="https://www.died.cc/">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+/* ============================================================
+   DIED · 大极照明 官网样式
+   高档灰色基调 + 暖金强调，适合跨境独立站推广，移动端友好
+   ============================================================ */
+:root{
+  --bg:#f3f3f5;          /* 高档浅灰 · 主背景 */
+  --bg-2:#eaeaee;        /* 次级浅灰 */
+  --card:#ffffff;        /* 卡片白 */
+  --ink:#232327;         /* 深灰 · 深色区 */
+  --ink-2:#2c2c31;       /* 次级深灰 */
+  --ink-3:#333338;       /* 卡片深灰 */
+  --gold:#c0a062;        /* 暖金强调 */
+  --gold-2:#dcc08c;      /* 浅金 */
+  --text:#232327;
+  --text-soft:#6f6f77;
+  --line:#e3e3e8;
+  --line-dark:rgba(255,255,255,.1);
+  --shadow:0 24px 56px -26px rgba(30,30,36,.25);
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+::selection{background:var(--gold);color:#fff}
+
+/* ---------- 通用 ---------- */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:88px 0}
+.section--gray{background:var(--bg)}
+.section--gray2{background:var(--bg-2)}
+.section--dark{background:var(--ink);color:#e9e9ed}
+.sec-head{max-width:640px;margin-bottom:50px}
+.sec-head--center{margin-left:auto;margin-right:auto;text-align:center}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px}
+.eyebrow::before{content:"";width:32px;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.sec-head--center .eyebrow{justify-content:center}
+.sec-head--center .eyebrow::after{content:"";width:32px;height:2px;background:linear-gradient(270deg,var(--gold),transparent)}
+.section--dark .eyebrow{color:var(--gold-2)}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.3}
+.sec-title{font-size:clamp(26px,3.2vw,40px);letter-spacing:.04em}
+.sec-sub{margin-top:12px;color:var(--text-soft);font-size:14.5px}
+.section--dark .sec-sub{color:#a7a7af}
+
+/* ---------- 顶部导航（浅灰高档） ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(243,243,245,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:background .3s}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand img{height:34px;width:auto}
+.brand-name{font-family:var(--serif);font-weight:700;color:var(--text);font-size:19px;letter-spacing:.08em;line-height:1.2}
+.brand-name small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.38em;color:var(--gold);font-weight:500;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{color:#4a4a52;font-size:14.5px;position:relative;padding:6px 2px;transition:color .25s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:width .3s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang-switch{display:flex;border:1px solid var(--line);border-radius:100px;overflow:hidden;background:#fff}
+.lang-switch button{background:none;border:none;padding:8px 16px;font-size:13.5px;cursor:pointer;color:var(--text-soft);font-family:var(--sans);transition:all .25s}
+.lang-switch button.on{background:var(--ink);color:#fff}
+.nav-cta{background:var(--ink);color:#fff;padding:10px 20px;border-radius:6px;font-weight:500;font-size:13.5px;letter-spacing:.06em;transition:background .25s,transform .25s}
+.nav-cta:hover{background:var(--gold);color:#1d1d20;transform:translateY(-1px)}
+.nav-toggle{display:none;background:#fff;border:1px solid var(--line);border-radius:8px;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+
+/* ---------- Hero（深灰） ---------- */
+.hero{background:var(--ink);color:#eee;padding:150px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 76% 30%,rgba(192,160,98,.18),transparent 62%),radial-gradient(600px 420px at 10% 90%,rgba(192,160,98,.1),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(192,160,98,.5);color:var(--gold-2);padding:7px 16px;border-radius:100px;font-size:12.5px;letter-spacing:.16em;margin-bottom:26px;background:rgba(192,160,98,.08)}
+.hero-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.hero h1{font-size:clamp(34px,4.8vw,58px);font-weight:900;letter-spacing:.05em;line-height:1.24}
+.hero h1 em{font-style:normal;color:transparent;background:linear-gradient(120deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text}
+.hero-desc{margin:22px 0 34px;color:#a7a7af;font-size:15.5px;max-width:480px;font-weight:300}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:6px;font-size:14.5px;letter-spacing:.05em;font-weight:500;transition:all .28s;border:1px solid transparent}
+.btn--gold{background:var(--gold);color:#191410}
+.btn--gold:hover{background:var(--gold-2);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(192,160,98,.5)}
+.btn--ghost{border-color:rgba(255,255,255,.3);color:#fff}
+.btn--ghost:hover{border-color:var(--gold);color:var(--gold-2)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0 26px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line-dark);max-width:560px}
+.hstat b{font-family:var(--serif);font-size:28px;color:var(--gold-2);font-weight:700;display:block;line-height:1.1}
+.hstat b i{font-style:normal;font-size:15px;margin-left:2px}
+.hstat span{font-size:12px;color:#8f8f98;letter-spacing:.1em;margin-top:5px;display:block}
+.hero-visual{position:relative}
+.hero-visual img{width:100%;aspect-ratio:16/10.5;object-fit:cover;border-radius:16px;border:1px solid rgba(192,160,98,.35);box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+.hero-visual::before{content:"";position:absolute;inset:-12px;border:1px solid rgba(192,160,98,.22);border-radius:22px;z-index:-1}
+.hero-chip{position:absolute;left:-30px;bottom:32px;background:rgba(44,44,49,.94);border:1px solid var(--line-dark);border-radius:12px;padding:13px 17px;backdrop-filter:blur(8px);display:flex;align-items:center;gap:12px}
+.hero-chip .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(192,160,98,.2),0 0 16px var(--gold)}
+.hero-chip b{font-size:13.5px;color:#fff;display:block;line-height:1.3}
+.hero-chip span{font-size:11px;color:#8f8f98}
+
+/* ---------- 关于我们 ---------- */
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:68px;align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.about-img::after{content:"";position:absolute;inset:auto -16px -16px auto;width:60%;height:60%;border:1px solid var(--gold);border-radius:14px;z-index:-1}
+.about-exp{position:absolute;left:-24px;top:-24px;background:var(--ink);color:#fff;border-radius:12px;padding:15px 20px;display:flex;align-items:baseline;gap:8px;box-shadow:var(--shadow)}
+.about-exp b{font-family:var(--serif);font-size:34px;color:var(--gold-2)}
+.about-exp span{font-size:11.5px;color:#a7a7af;letter-spacing:.12em;max-width:86px;line-height:1.5}
+.about-copy h3{font-size:clamp(22px,2.6vw,32px);margin-bottom:18px}
+.about-copy p{color:var(--text-soft);font-size:14.5px;margin-bottom:24px}
+.value-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.value{display:flex;gap:13px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:12px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s}
+.value:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow)}
+.value svg{flex:none;width:30px;height:30px;margin-top:2px}
+.value b{display:block;font-size:15px;margin-bottom:3px}
+.value span{font-size:12.5px;color:var(--text-soft)}
+
+/* ---------- 产品中心 ---------- */
+.cat-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.cat-tab{padding:8px 20px;border-radius:100px;border:1px solid var(--line);color:var(--text-soft);font-size:13.5px;cursor:pointer;transition:all .25s;background:#fff}
+.cat-tab:hover{color:var(--text);border-color:var(--gold)}
+.cat-tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prod-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
+.prod-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:var(--shadow)}
+.prod-card .img{aspect-ratio:1/1;overflow:hidden;position:relative;background:#f0f0f2}
+.prod-card .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.prod-card:hover .img img{transform:scale(1.06)}
+.prod-cat{position:absolute;left:14px;top:14px;z-index:2;background:rgba(35,35,39,.82);border:1px solid rgba(192,160,98,.45);color:var(--gold-2);font-size:11.5px;letter-spacing:.12em;padding:4px 11px;border-radius:100px;backdrop-filter:blur(6px)}
+.prod-info{padding:18px 20px 22px}
+.prod-info h3{font-size:17.5px;margin-bottom:6px}
+.prod-info p{font-size:13px;color:var(--text-soft);line-height:1.65;min-height:58px}
+.prod-more{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--gold);font-size:13px;letter-spacing:.05em}
+.prod-more svg{transition:transform .3s}
+.prod-card:hover .prod-more svg{transform:translateX(5px)}
+
+/* ---------- 解决方案 ---------- */
+.sol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sol-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.sol-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--gold)}
+.sol-card svg{width:38px;height:38px;margin-bottom:14px}
+.sol-card h3{font-size:17px;margin-bottom:8px}
+.sol-card p{font-size:13px;color:var(--text-soft)}
+.sol-banner{position:relative;margin-top:48px;border-radius:16px;overflow:hidden;aspect-ratio:21/7;display:flex;align-items:flex-end}
+.sol-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sol-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,35,39,.85),rgba(35,35,39,.12))}
+.sol-banner .inner{position:relative;z-index:2;padding:40px 44px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;flex-wrap:wrap}
+.sol-banner h3{font-size:clamp(19px,2.4vw,28px);margin-bottom:6px}
+.sol-banner p{color:#c3c3cb;font-size:14px;max-width:520px}
+
+/* ---------- 案例 ---------- */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;display:block}
+.case-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.case-card:hover img{transform:scale(1.06)}
+.case-card::after{content:"";position:absolute;inset:0;background:linear-gradient(190deg,transparent 42%,rgba(20,20,24,.86))}
+.case-tag{position:absolute;left:16px;top:16px;z-index:2;font-size:11.5px;letter-spacing:.12em;color:var(--gold-2);border:1px solid rgba(192,160,98,.5);background:rgba(35,35,39,.55);padding:4px 12px;border-radius:100px;backdrop-filter:blur(6px)}
+.case-info{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;color:#fff}
+.case-info h3{font-size:17.5px;margin-bottom:4px}
+.case-info p{font-size:12.5px;color:#bcbcc4}
+
+/* ---------- 光影视频 ---------- */
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.video-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:14px;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
+.video-card:hover{transform:translateY(-6px);border-color:rgba(192,160,98,.5);box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+.video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+.video-info{padding:18px 20px}
+.video-info h3{font-size:16px;color:#fff;margin-bottom:5px}
+.video-info p{font-size:12.5px;color:#a7a7af}
+
+/* ---------- 联系我们 ---------- */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;color:#e9e9ed}
+.contact-grid h3{font-size:clamp(22px,2.4vw,30px);margin-bottom:12px;color:#fff}
+.contact-grid .lead{color:#a7a7af;font-size:14.5px;margin-bottom:30px;max-width:460px}
+.c-item{display:flex;gap:15px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line-dark)}
+.c-item svg{flex:none;width:20px;height:20px;margin-top:3px}
+.c-item b{display:block;font-size:12.5px;color:#8f8f98;letter-spacing:.12em;margin-bottom:3px}
+.c-item span,.c-item a{font-size:15px;color:#fff;word-break:break-all}
+.qr-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px;max-width:560px}
+.qr-card{background:#fff;border-radius:14px;padding:16px}
+.qr-card img{width:100%;border-radius:8px}
+.qr-card b{display:block;text-align:center;font-size:13px;color:var(--text);margin-top:10px}
+.qr-card span{display:block;text-align:center;font-size:11.5px;color:var(--text-soft);margin-top:2px}
+.contact-form{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:16px;padding:32px}
+.contact-form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12.5px;color:#a7a7af;margin-bottom:7px;letter-spacing:.06em}
+.field input,.field textarea{width:100%;background:var(--ink-3);border:1px solid var(--line-dark);border-radius:8px;padding:12px 15px;color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .25s}
+.field input:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{resize:vertical;min-height:96px}
+.form-note{font-size:12px;color:#7f7f88;margin-top:10px;text-align:center}
+
+/* ---------- 页脚 ---------- */
+.footer{background:#1b1b1f;color:#9a9aa2;padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px}
+.footer-brand{font-family:var(--serif);font-size:26px;font-weight:900;color:#fff;letter-spacing:.14em}
+.footer-brand small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.42em;color:var(--gold);font-weight:400;margin-top:4px}
+.footer-desc{margin-top:16px;font-size:13px;line-height:1.8;max-width:300px}
+.footer h4{color:#fff;font-size:14.5px;letter-spacing:.12em;margin-bottom:18px;font-weight:500}
+.footer ul li{margin-bottom:11px}
+.footer ul a,.footer ul span{font-size:13.5px;transition:color .25s}
+.footer ul a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid var(--line-dark);padding:20px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#73737c}
+
+/* ---------- 浮动联系 ---------- */
+.float-bar{position:fixed;right:20px;bottom:28px;z-index:90;display:flex;flex-direction:column;gap:12px}
+.float-btn{width:46px;height:46px;border-radius:50%;background:rgba(44,44,49,.94);border:1px solid rgba(192,160,98,.45);display:flex;align-items:center;justify-content:center;color:var(--gold-2);cursor:pointer;backdrop-filter:blur(8px);transition:all .25s;box-shadow:0 10px 26px -10px rgba(0,0,0,.5)}
+.float-btn:hover{background:var(--gold);color:#191410;transform:translateY(-2px)}
+.float-btn.top{background:rgba(44,44,49,.7);border-color:var(--line-dark);color:#8f8f98}
+.float-btn.top:hover{color:#fff}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1080px){
+  .hero-inner{grid-template-columns:1fr;gap:44px}
+  .hero-stats{max-width:none;grid-template-columns:repeat(4,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:52px}
+  .sol-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:rgba(243,243,245,.98);flex-direction:column;align-items:flex-start;padding:20px 24px;gap:4px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%;padding:12px 2px;font-size:16px}
+  .nav-cta{margin-top:12px}
+  .nav-toggle{display:flex}
+  .prod-grid,.case-grid{grid-template-columns:repeat(2,1fr)}
+  .section{padding:68px 0}
+  .hero{padding:132px 0 76px}
+}
+@media (max-width:560px){
+  .prod-grid,.case-grid{grid-template-columns:1fr}
+  .video-grid,.sol-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:20px 0}
+  .hero-chip{left:12px;bottom:12px}
+  .about-exp{left:-6px;top:-6px}
+  .value-grid{grid-template-columns:1fr}
+  .contact-form .row{grid-template-columns:1fr}
+  .qr-row{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .brand-name{font-size:16px}
+  .nav-right .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+   ★ 站点数据区（后台修改入口）★
+   修改内容只需编辑下方 window.SITE_DATA。
+   · i18n.zh / i18n.en 分别为中英文文案，改一处记得同步另一处
+   · products / cases / videos 里 name、desc、cat 均为 {zh,en} 双语
+   · 图片、logo、二维码等资源地址直接替换 URL 即可
+   ============================================================ -->
+<script>
+window.SITE_DATA = {
+  brand: { zh: "大极照明", en: "DIED" },
+  logo: "https://aka.doubaocdn.com/s/b5Umdld901",
+  contact: {
+    phone: { label: { zh: "联系电话", en: "Phone" }, val: "+86 186 6662 9311", href: "tel:+8618666629311" },
+    email: { label: { zh: "邮箱", en: "Email" }, val: "DGDHLAMP@OUTLOOK.COM", href: "mailto:DGDHLAMP@OUTLOOK.COM" },
+    wechat: { label: { zh: "微信", en: "WeChat" }, val: "Daji931", qr: "https://aka.doubaocdn.com/s/LFIuKDcsgK" },
+    whatsapp: { label: { zh: "WhatsApp", en: "WhatsApp" }, qr: "https://aka.doubaocdn.com/s/Kl3xjR9SfK" },
+    facebook: { label: { zh: "Facebook", en: "Facebook" }, qr: "https://aka.doubaocdn.com/s/N7Uz87RwAD" },
+    address: { label: { zh: "公司地址", en: "Address" }, zh: "中国广东江门", en: "Jiangmen, Guangdong, China" }
+  },
+  products: [
+    { img: "https://aka.doubaocdn.com/s/skl9bwJm7F", cat: { zh: "商业照明", en: "Commercial" }, name: { zh: "磁吸轨道射灯", en: "Magnetic Track Spotlight" }, desc: { zh: "黑色哑光轨道射灯，灯头角度可调，深防眩反光杯，店铺与展厅重点照明之选。", en: "Black matte track spotlight, adjustable head, deep anti-glare reflector — ideal for stores and showrooms." } },
+    { img: "https://aka.doubaocdn.com/s/v0axovMQkO", cat: { zh: "商业照明", en: "Commercial" }, name: { zh: "LED 嵌入式筒灯", en: "LED Recessed Downlight" }, desc: { zh: "深灰散热筒身配白色装饰环，弹簧卡扣安装，光效均匀耐用。", en: "Gray heat-sink body with white trim ring, spring-clip installation, even output and long durability." } },
+    { img: "https://aka.doubaocdn.com/s/iJXxZVv2t0", cat: { zh: "商业照明", en: "Commercial" }, name: { zh: "嵌入式方形射灯", en: "Recessed Square Spotlight" }, desc: { zh: "方形边框白色灯杯可调角度，精准投光，适合商品陈列与重点照明。", en: "Square trim with adjustable white cup, precise accent lighting for merchandise displays." } },
+    { img: "https://aka.doubaocdn.com/s/QgTmxuHlYI", cat: { zh: "商业照明", en: "Commercial" }, name: { zh: "嵌入式圆形射灯", en: "Recessed Round Spotlight" }, desc: { zh: "白色圆面灯体，环形纹理防眩设计，嵌入式安装，商业空间基础照明。", en: "White round face, ring-textured anti-glare design, flush mount for general commercial lighting." } },
+    { img: "https://aka.doubaocdn.com/s/fmeI3HtXIw", cat: { zh: "商业照明", en: "Commercial" }, name: { zh: "白色边框嵌入式筒灯", en: "White-Trim Recessed Downlight" }, desc: { zh: "白色装饰边框配灰色散热筒身，安装简便，简洁百搭。", en: "White decorative trim with gray body, easy installation, clean and versatile." } },
+    { img: "https://aka.doubaocdn.com/s/tYLDvoZNA8", cat: { zh: "商业照明", en: "Commercial" }, name: { zh: "明装双头筒灯", en: "Surface Twin Downlight" }, desc: { zh: "白色圆柱灯体双头可调，无需开孔直接明装，暖光营造温馨氛围。", en: "White twin-head cylinder, no ceiling cutout needed, adjustable warm glow for cozy spaces." } },
+    { img: "https://aka.doubaocdn.com/s/cFEHKxzDni", cat: { zh: "装饰照明", en: "Decorative" }, name: { zh: "轻奢波浪壁灯", en: "Luxury Wave Wall Lamp" }, desc: { zh: "香槟金金属结构搭配乳白波浪陶瓷灯罩，柔和暖光，轻奢风格之选。", en: "Champagne-gold metal with milky wave ceramic shade, soft warm glow — a luxury style icon." } },
+    { img: "https://aka.doubaocdn.com/s/eoKLyXO6HD", cat: { zh: "装饰照明", en: "Decorative" }, name: { zh: "S形复古玻璃壁灯", en: "Retro S-Curve Glass Wall Lamp" }, desc: { zh: "深绿金属S形支架，螺旋纹理玻璃灯罩，复古工业风氛围照明。", en: "Dark green S-shaped bracket with spiral-textured glass shade — retro industrial ambience." } },
+    { img: "https://aka.doubaocdn.com/s/DrwNqzD7HE", cat: { zh: "装饰照明", en: "Decorative" }, name: { zh: "铁艺灯笼壁灯", en: "Iron Lantern Wall Lamp" }, desc: { zh: "欧式复古铁艺造型，棱面玻璃灯笼灯体，暖光点亮墙面与户外廊道。", en: "European retro iron lantern with faceted glass — warm light for walls and porches." } },
+    { img: "https://aka.doubaocdn.com/s/EQzqfdWEbW", cat: { zh: "装饰照明", en: "Decorative" }, name: { zh: "现代极简双头壁灯", en: "Modern Minimal Twin Wall Lamp" }, desc: { zh: "黑色金属双头斜切灯体，向上投光形成柔美光晕，简约设计感。", en: "Black twin slanted heads projecting a soft wash of light — sleek and minimal." } },
+    { img: "https://aka.doubaocdn.com/s/foCU75l9kx", cat: { zh: "装饰照明", en: "Decorative" }, name: { zh: "方形玻璃壁灯", en: "Square Glass Wall Lamp" }, desc: { zh: "黑色方形壁挂结构，竖纹玻璃透出暖光，玄关氛围之选。", en: "Black square mount with ribbed glass shade — minimalist warm glow for hallways." } },
+    { img: "https://aka.doubaocdn.com/s/xXGVoyzzn6", cat: { zh: "户外照明", en: "Outdoor" }, name: { zh: "欧式铁艺户外壁灯", en: "European Iron Outdoor Wall Lamp" }, desc: { zh: "卷花铁艺支架搭配玻璃灯罩，户外墙面暖光，欧式建筑立面氛围照明。", en: "Scrolled iron bracket with glass shade — warm facade lighting for European-style buildings." } }
+  ],
+  cats: { zh: ["全部", "商业照明", "装饰照明", "户外照明"], en: ["All", "Commercial", "Decorative", "Outdoor"] },
+  i18n: {
+    zh: {
+      nav: [
+        { label: "首页", href: "#home" }, { label: "关于我们", href: "#about" },
+        { label: "产品中心", href: "#products" }, { label: "解决方案", href: "#solutions" },
+        { label: "案例展示", href: "#cases" }, { label: "光影视频", href: "#videos" },
+        { label: "联系我们", href: "#contact" }
+      ],
+      navCta: "获取方案",
+      hero: {
+        badge: "诠释灯光新语言™ · 专业 LED 照明解决方案服务商",
+        titleA: "以光筑境", titleB: "精工造极",
+        desc: "大极照明（DIED）专注商业、装饰与户外照明，集产品研发、方案设计与定制交付于一体，让每一束光都服务于空间价值。",
+        cta1: "浏览产品", cta2: "免费获取方案",
+        stats: [
+          { num: "12", suffix: "+", label: "年行业深耕（示例）" },
+          { num: "60", suffix: "+", label: "产品系列（示例）" },
+          { num: "800", suffix: "+", label: "合作项目（示例）" },
+          { num: "98", suffix: "%", label: "客户满意度（示例）" }
+        ],
+        chipTitle: "光 · 空间价值", chipSub: "一体化照明落地服务"
+      },
+      about: { eyebrow: "关于我们", expNum: "12", expUnit: "年", expLabel: "深耕照明行业（示例）", title: "以精工铸就杰作，智造光影价值", paras: ["大极照明（DIED）是集 LED 灯具研发、生产、销售与照明设计于一体的专业照明企业，为商业连锁、酒店地产、餐饮空间及高端家居提供从产品到方案的一站式照明服务。", "从一颗灯珠到整店光影，我们坚持精工标准：每一款产品都经过光品质、散热、寿命与安全的多重验证，让光不仅亮，而且对。"], values: [
+        { icon: "gem", title: "精工品质", desc: "严选灯珠与散热结构，全流程质检把控" },
+        { icon: "bulb", title: "创新设计", desc: "光学、结构与智能控制持续迭代升级" },
+        { icon: "ruler", title: "定制服务", desc: "支持非标定制，按项目场景量身打造" },
+        { icon: "shield", title: "快速响应", desc: "售前方案、打样、交付与售后全程跟进" }
+      ] },
+      products: { eyebrow: "产品中心", title: "光影产品，精工造极", sub: "覆盖商业、装饰与户外场景的 LED 照明产品线", more: "了解更多" },
+      solutions: { eyebrow: "解决方案", title: "为每一种空间，定义正确的光", sub: "从空间功能出发，提供场景化的照明设计与产品组合", items: [
+        { icon: "store", title: "商业空间", desc: "店铺、商超、展厅等商业场所照明，用光塑造商品质感与购物氛围。" },
+        { icon: "hotel", title: "酒店会所", desc: "大堂、客房、餐厅多层次照明方案，营造高端入住体验。" },
+        { icon: "office", title: "办公教育", desc: "低眩光健康光环境，提升专注度与工作效率。" },
+        { icon: "outdoor", title: "户外景观", desc: "建筑泛光、庭院与道路照明，安全与美感兼备。" }
+      ], banner: { img: "https://aka.doubaocdn.com/s/gIMbxU0cBE", title: "店装一体化照明落地", desc: "从灯光设计、产品选型到施工交付，为连锁品牌与商业空间提供整体照明解决方案，让每一家门店都拥有统一的品牌光环境。", cta: "获取一体化方案" } },
+      cases: { eyebrow: "案例展示", title: "真实项目场景", sub: "覆盖家居、餐饮与户外空间的光影实景", items: [
+        { tag: "家居空间", title: "美式玄关壁灯实景", desc: "暖光点亮回家时刻 · 玻璃与金属质感", img: "https://aka.doubaocdn.com/s/jn1dDmDycT" },
+        { tag: "餐饮空间", title: "工业风餐厅照明", desc: "复古壁灯营造静谧氛围 · 粗犷与温暖并存", img: "https://aka.doubaocdn.com/s/2iz7viDCFT" },
+        { tag: "餐饮空间", title: "复古咖啡馆照明", desc: "墨绿壁灯与木质空间融合 · 慵懒暖光", img: "https://aka.doubaocdn.com/s/MD8YGNIFWD" }
+      ] },
+      videos: { eyebrow: "光影视频", title: "看得见的光", sub: "真实空间与产品视频，直观感受点亮效果", items: [
+        { title: "轻奢餐厅空间光影", desc: "黄铜布艺壁灯 × 用餐区氛围照明", src: "https://aka.doubaocdn.com/s/vVbHfOi3Qe", poster: "https://aka.doubaocdn.com/s/ltTigWWQ9p" },
+        { title: "方形玻璃壁灯 · 产品特写", desc: "竖纹玻璃灯罩暖光光影", src: "https://aka.doubaocdn.com/s/TWV8MwBaZj", poster: "https://aka.doubaocdn.com/s/NTc2LmfuDI" }
+      ] },
+      contact: {
+        eyebrow: "联系我们", title: "让我们为你的空间设计光", lead: "无论是一个门店的焕新，还是整体系列的落地，欢迎告诉我们你的照明需求，我们将在第一时间响应。",
+        form: { name: "您的称呼", namePh: "请输入称呼", phone: "联系电话", phonePh: "请输入手机号", type: "项目类型", typePh: "如：门店照明 / 酒店项目", msg: "需求描述", msgPh: "请简单描述您的项目与照明需求", submit: "提交需求", note: "演示表单，正式上线前请配置提交方式。" },
+        qr: { wechat: "微信扫码添加 Daji931", whatsapp: "WhatsApp 扫码咨询", facebook: "Facebook 扫码关注" }
+      },
+      footer: {
+        desc: "诠释灯光新语言™。大极照明（DIED）为商业、酒店、家居与户外空间提供专业 LED 照明产品与整体解决方案。",
+        colProducts: "产品中心", colNav: "快捷导航",
+        products: [ { t: "商业照明", h: "#products" }, { t: "装饰照明", h: "#products" }, { t: "户外照明", h: "#products" } ],
+        nav: [ { t: "关于我们", h: "#about" }, { t: "解决方案", h: "#solutions" }, { t: "案例展示", h: "#cases" }, { t: "光影视频", h: "#videos" }, { t: "联系我们", h: "#contact" } ],
+        copyright: "大极照明 DIED 版权所有"
+      }
+    },
+    en: {
+      nav: [
+        { label: "Home", href: "#home" }, { label: "About", href: "#about" },
+        { label: "Products", href: "#products" }, { label: "Solutions", href: "#solutions" },
+        { label: "Cases", href: "#cases" }, { label: "Videos", href: "#videos" },
+        { label: "Contact", href: "#contact" }
+      ],
+      navCta: "Get a Quote",
+      hero: {
+        badge: "A New Language of Light™ · LED Lighting Solutions",
+        titleA: "Light the Space", titleB: "Perfect the Craft",
+        desc: "DIED focuses on commercial, decorative and outdoor lighting — R&D, lighting design and custom delivery all in one, making every beam serve the value of the space.",
+        cta1: "View Products", cta2: "Free Consultation",
+        stats: [
+          { num: "12", suffix: "+", label: "Years in Industry (sample)" },
+          { num: "60", suffix: "+", label: "Product Series (sample)" },
+          { num: "800", suffix: "+", label: "Projects Delivered (sample)" },
+          { num: "98", suffix: "%", label: "Client Satisfaction (sample)" }
+        ],
+        chipTitle: "Light · Space Value", chipSub: "Turnkey Lighting Solutions"
+      },
+      about: { eyebrow: "About Us", expNum: "12", expUnit: "", expLabel: "Years in Lighting (sample)", title: "Fine Craftsmanship, Brilliant Light Value", paras: ["DIED is a professional lighting company integrating LED R&D, manufacturing, sales and lighting design — one-stop lighting service for retail chains, hotels, restaurants and premium homes.", "From a single LED chip to a whole space, we hold the craft standard: every product passes optical quality, thermal, lifetime and safety verification — light that is not only bright, but right."], values: [
+        { icon: "gem", title: "Fine Craft", desc: "Selected chips & thermal design, full-process QC" },
+        { icon: "bulb", title: "Innovative Design", desc: "Continuous upgrade of optics, structure & control" },
+        { icon: "ruler", title: "Custom Service", desc: "Non-standard customization tailored to your project" },
+        { icon: "shield", title: "Fast Response", desc: "End-to-end support from design to after-sales" }
+      ] },
+      products: { eyebrow: "Products", title: "Light, Crafted to Perfection", sub: "LED lighting lines covering commercial, decorative and outdoor scenes", more: "Learn More" },
+      solutions: { eyebrow: "Solutions", title: "The Right Light for Every Space", sub: "Scene-based lighting design and product combos", items: [
+        { icon: "store", title: "Commercial Spaces", desc: "Stores, malls and showrooms — light shapes product quality and shopping atmosphere." },
+        { icon: "hotel", title: "Hotel & Hospitality", desc: "Layered lighting for lobbies, rooms and restaurants — a premium guest experience." },
+        { icon: "office", title: "Office & Education", desc: "Low-glare healthy light that boosts focus and productivity." },
+        { icon: "outdoor", title: "Outdoor & Landscape", desc: "Facade, courtyard and pathway lighting — safe and beautiful." }
+      ], banner: { img: "https://aka.doubaocdn.com/s/gIMbxU0cBE", title: "Turnkey Store Lighting", desc: "From lighting design and product selection to installation, DIED delivers integrated solutions for retail chains — one consistent brand light across every store.", cta: "Get the Solution" } },
+      cases: { eyebrow: "Cases", title: "Real Projects, Real Light", sub: "Home, F&B and outdoor lighting in action", items: [
+        { tag: "Home", title: "American-Style Entryway", desc: "Warm light for homecoming · glass & metal texture", img: "https://aka.doubaocdn.com/s/jn1dDmDycT" },
+        { tag: "F&B", title: "Industrial Restaurant", desc: "Retro wall lamps · rustic meets cozy", img: "https://aka.doubaocdn.com/s/2iz7viDCFT" },
+        { tag: "F&B", title: "Retro Cafe", desc: "Dark green lamps blend with wood · lazy warm glow", img: "https://aka.doubaocdn.com/s/MD8YGNIFWD" }
+      ] },
+      videos: { eyebrow: "Videos", title: "Light You Can See", sub: "Real spaces and products in motion", items: [
+        { title: "Luxury Restaurant Lighting", desc: "Brass fabric wall lamp × dining ambience", src: "https://aka.doubaocdn.com/s/vVbHfOi3Qe", poster: "https://aka.doubaocdn.com/s/ltTigWWQ9p" },
+        { title: "Square Glass Wall Lamp", desc: "Ribbed glass shade in warm light", src: "https://aka.doubaocdn.com/s/TWV8MwBaZj", poster: "https://aka.doubaocdn.com/s/NTc2LmfuDI" }
+      ] },
+      contact: {
+        eyebrow: "Contact Us", title: "Let Us Design Light for Your Space", lead: "Whether it's a single store refresh or a full rollout, tell us your lighting needs — we'll respond promptly.",
+        form: { name: "Your Name", namePh: "Enter your name", phone: "Phone", phonePh: "Enter your phone", type: "Project Type", typePh: "e.g. store / hotel project", msg: "Requirement", msgPh: "Briefly describe your project and lighting needs", submit: "Submit Inquiry", note: "Demo form — configure the submission method before launch." },
+        qr: { wechat: "Scan to add on WeChat", whatsapp: "Scan to chat on WhatsApp", facebook: "Scan to follow on Facebook" }
+      },
+      footer: {
+        desc: "A New Language of Light™. DIED delivers professional LED lighting products and turnkey solutions for commercial, hospitality, home and outdoor spaces.",
+        colProducts: "Products", colNav: "Quick Links",
+        products: [ { t: "Commercial", h: "#products" }, { t: "Decorative", h: "#products" }, { t: "Outdoor", h: "#products" } ],
+        nav: [ { t: "About", h: "#about" }, { t: "Solutions", h: "#solutions" }, { t: "Cases", h: "#cases" }, { t: "Videos", h: "#videos" }, { t: "Contact", h: "#contact" } ],
+        copyright: "DIED Lighting. All rights reserved."
+      }
+    }
+  }
+};
+</script>
+
+<!-- ================= 顶部导航 ================= -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand" aria-label="DIED 大极照明">
+      <img id="navLogo" src="https://aka.doubaocdn.com/s/b5Umdld901" alt="DIED">
+      <span class="brand-name"><span id="brandZh"></span><small id="brandEn"></small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="导航"></nav>
+    <div class="nav-right">
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="语言切换">
+        <button data-lang="zh">中文</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a class="nav-cta" id="navCta" href="#contact"></a>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#232327" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= Hero ================= -->
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="hero-badge" id="heroBadge"></span>
+      <h1><span id="heroTitleA"></span><br><em id="heroTitleB"></em></h1>
+      <p class="hero-desc" id="heroDesc"></p>
+      <div class="hero-ctas">
+        <a class="btn btn--gold" id="heroCta1" href="#products"></a>
+        <a class="btn btn--ghost" id="heroCta2" href="#contact"></a>
+      </div>
+      <div class="hero-stats" id="heroStats"></div>
+    </div>
+    <div class="hero-visual">
+      <img id="heroImg" src="https://aka.doubaocdn.com/s/Wrc8FFsYRI" alt="DIED lighting solution">
+      <div class="hero-chip">
+        <span class="dot" aria-hidden="true"></span>
+        <div><b id="heroChipTitle"></b><span id="heroChipSub"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 关于我们 ================= -->
+<section class="section section--gray" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img">
+        <div class="about-exp"><b><span id="aboutExpNum"></span><span id="aboutExpUnit"></span></b><span id="aboutExpLabel"></span></div>
+        <img src="https://aka.doubaocdn.com/s/zwoU20X6Ux" alt="DIED craftsmanship">
+      </div>
+      <div class="about-copy">
+        <div class="eyebrow" id="aboutEyebrow"></div>
+        <h3 id="aboutTitle"></h3>
+        <p id="aboutP1"></p>
+        <p id="aboutP2"></p>
+        <div class="value-grid" id="valueGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 产品中心 ================= -->
+<section class="section section--gray2" id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" id="prodEyebrow"></div>
+      <h2 class="sec-title" id="prodTitle"></h2>
+      <p class="sec-sub" id="prodSub"></p>
+    </div>
+    <div class="cat-tabs" id="catTabs"></div>
+    <div class="prod-grid" id="prodGrid"></div>
+  </div>
+</section>
+
+<!-- ================= 解决方案 ================= -->
+<section class="section section--gray" id="solutions">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" id="solEyebrow"></div>
+      <h2 class="sec-title" id="solTitle"></h2>
+      <p class="sec-sub" id="solSub"></p>
+    </div>
+    <div class="sol-grid" id="solGrid"></div>
+    <div class="sol-banner">
+      <img id="solBannerImg" src="https://aka.doubaocdn.com/s/gIMbxU0cBE" alt="turnkey lighting">
+      <div class="inner">
+        <div>
+          <h3 id="solBannerTitle"></h3>
+          <p id="solBannerDesc"></p>
+        </div>
+        <a class="btn btn--gold" id="solBannerCta" href="#contact"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 案例展示 ================= -->
+<section class="section section--gray2" id="cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" id="caseEyebrow"></div>
+      <h2 class="sec-title" id="caseTitle"></h2>
+      <p class="sec-sub" id="caseSub"></p>
+    </div>
+    <div class="case-grid" id="caseGrid"></div>
+  </div>
+</section>
+
+<!-- ================= 光影视频 ================= -->
+<section class="section section--dark" id="videos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" id="videoEyebrow"></div>
+      <h2 class="sec-title" id="videoTitle"></h2>
+      <p class="sec-sub" id="videoSub"></p>
+    </div>
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- ================= 联系我们 ================= -->
+<section class="section section--dark" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow" id="ctEyebrow"></div>
+        <h3 id="ctTitle"></h3>
+        <p class="lead" id="ctLead"></p>
+        <div id="contactList"></div>
+        <div class="qr-row" id="qrRow"></div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="row">
+          <div class="field"><label id="fNameLabel" for="fName"></label><input id="fName" type="text"></div>
+          <div class="field"><label id="fPhoneLabel" for="fPhone"></label><input id="fPhone" type="tel"></div>
+        </div>
+        <div class="field"><label id="fTypeLabel" for="fType"></label><input id="fType" type="text"></div>
+        <div class="field"><label id="fMsgLabel" for="fMsg"></label><textarea id="fMsg"></textarea></div>
+        <button type="submit" class="btn btn--gold" id="formSubmit" style="width:100%;justify-content:center"></button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= 页脚 ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">DIED<small id="footerBrandZh"></small></div>
+        <p class="footer-desc" id="footerDesc"></p>
+      </div>
+      <div>
+        <h4 id="footCol1Title"></h4>
+        <ul id="footCol1"></ul>
+      </div>
+      <div>
+        <h4 id="footCol2Title"></h4>
+        <ul id="footCol2"></ul>
+      </div>
+      <div>
+        <h4 id="footContactTitle"></h4>
+        <ul>
+          <li><span id="footPhone"></span></li>
+          <li><span id="footEmail"></span></li>
+          <li><span id="footWechat"></span></li>
+          <li><span id="footAddr"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="copyright"></span>
+      <span id="footHint"></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= 浮动联系 ================= -->
+<div class="float-bar">
+  <a class="float-btn" id="floatPhone" href="tel:+8618666629311" aria-label="电话">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+  </a>
+  <a class="float-btn" href="#contact" aria-label="微信">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.6-.7L3 21l1.8-4.6A8.4 8.4 0 1 1 21 11.5z"/><circle cx="8.5" cy="11.5" r=".5"/><circle cx="15.5" cy="11.5" r=".5"/></svg>
+  </a>
+  <a class="float-btn" href="#contact" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.6-.7L3 21l1.8-4.6A8.4 8.4 0 1 1 21 11.5z"/><path d="M9.5 10.5h.01M14.5 10.5h.01M9.8 13.5a3 3 0 0 0 4.4 0"/></svg>
+  </a>
+  <button class="float-btn top" id="backTop" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+</div>
+
+<script>
+/* ============================================================
+   渲染逻辑：读取 SITE_DATA，按当前语言渲染整页。
+   语言切换、产品筛选均实时重渲染；一般无需修改下方代码。
+   ============================================================ */
+(function(){
+  var D = window.SITE_DATA;
+  var lang = 'zh';
+  var prodFilter = 'all';
+
+  function L(block){ return D.i18n[lang][block]; }
+
+  function render(){
+    /* 语言 / 文档 */
+    document.documentElement.lang = lang;
+    var brandZh = D.brand.zh;
+    var brandEn = D.brand.en;
+    document.getElementById('brandZh').textContent = brandZh;
+    document.getElementById('brandEn').textContent = brandEn;
+    document.getElementById('footerBrandZh').textContent = brandZh + ' · ' + brandEn;
+    document.getElementById('navLogo').src = D.logo;
+
+    /* 导航 */
+    var t = L('nav');
+    document.getElementById('navLinks').innerHTML = t.map(function(item){
+      return '<a href="' + item.href + '">' + item.label + '</a>';
+    }).join('');
+    document.getElementById('navCta').textContent = L('navCta');
+
+    /* Hero */
+    var h = L('hero');
+    document.getElementById('heroBadge').textContent = h.badge;
+    document.getElementById('heroTitleA').textContent = h.titleA;
+    document.getElementById('heroTitleB').textContent = h.titleB;
+    document.getElementById('heroDesc').textContent = h.desc;
+    document.getElementById('heroCta1').textContent = h.cta1;
+    document.getElementById('heroCta2').textContent = h.cta2;
+    document.getElementById('heroChipTitle').textContent = h.chipTitle;
+    document.getElementById('heroChipSub').textContent = h.chipSub;
+    document.getElementById('heroStats').innerHTML = h.stats.map(function(s){
+      return '<div class="hstat"><b>' + s.num + '<i>' + s.suffix + '</i></b><span>' + s.label + '</span></div>';
+    }).join('');
+
+    /* 关于 */
+    var a = L('about');
+    document.getElementById('aboutEyebrow').textContent = a.eyebrow;
+    document.getElementById('aboutExpNum').textContent = a.expNum;
+    document.getElementById('aboutExpUnit').textContent = a.expUnit;
+    document.getElementById('aboutExpLabel').textContent = a.expLabel;
+    document.getElementById('aboutTitle').textContent = a.title;
+    document.getElementById('aboutP1').textContent = a.paras[0];
+    document.getElementById('aboutP2').textContent = a.paras[1];
+    document.getElementById('valueGrid').innerHTML = a.values.map(function(v){
+      return '<div class="value">' + iconSvg(v.icon) + '<div><b>' + v.title + '</b><span>' + v.desc + '</span></div></div>';
+    }).join('');
+
+    /* 产品 */
+    var p = L('products');
+    document.getElementById('prodEyebrow').textContent = p.eyebrow;
+    document.getElementById('prodTitle').textContent = p.title;
+    document.getElementById('prodSub').textContent = p.sub;
+    var cats = D.cats[lang];
+    document.getElementById('catTabs').innerHTML = cats.map(function(c, i){
+      return '<button class="cat-tab' + (i === 0 ? ' on' : '') + '" data-cat="' + c + '">' + c + '</button>';
+    }).join('');
+    renderProducts();
+
+    /* 解决方案 */
+    var s = L('solutions');
+    document.getElementById('solEyebrow').textContent = s.eyebrow;
+    document.getElementById('solTitle').textContent = s.title;
+    document.getElementById('solSub').textContent = s.sub;
+    document.getElementById('solGrid').innerHTML = s.items.map(function(x){
+      return '<div class="sol-card">' + iconSvg(x.icon) + '<h3>' + x.title + '</h3><p>' + x.desc + '</p></div>';
+    }).join('');
+    document.getElementById('solBannerTitle').textContent = s.banner.title;
+    document.getElementById('solBannerDesc').textContent = s.banner.desc;
+    document.getElementById('solBannerCta').textContent = s.banner.cta;
+
+    /* 案例 */
+    var c = L('cases');
+    document.getElementById('caseEyebrow').textContent = c.eyebrow;
+    document.getElementById('caseTitle').textContent = c.title;
+    document.getElementById('caseSub').textContent = c.sub;
+    document.getElementById('caseGrid').innerHTML = c.items.map(function(x){
+      return '<a class="case-card" href="#contact">' +
+        '<img src="' + x.img + '" alt="' + x.title + '" loading="lazy">' +
+        '<span class="case-tag">' + x.tag + '</span>' +
+        '<div class="case-info"><h3>' + x.title + '</h3><p>' + x.desc + '</p></div></a>';
+    }).join('');
+
+    /* 视频 */
+    var v = L('videos');
+    document.getElementById('videoEyebrow').textContent = v.eyebrow;
+    document.getElementById('videoTitle').textContent = v.title;
+    document.getElementById('videoSub').textContent = v.sub;
+    document.getElementById('videoGrid').innerHTML = v.items.map(function(x){
+      return '<div class="video-card"><video controls preload="metadata" playsinline poster="' + x.poster + '"><source src="' + x.src + '" type="video/mp4"></video>' +
+        '<div class="video-info"><h3>' + x.title + '</h3><p>' + x.desc + '</p></div></div>';
+    }).join('');
+
+    /* 联系 */
+    var ct = L('contact');
+    document.getElementById('ctEyebrow').textContent = ct.eyebrow;
+    document.getElementById('ctTitle').textContent = ct.title;
+    document.getElementById('ctLead').textContent = ct.lead;
+    var addr = lang === 'zh' ? D.contact.address.zh : D.contact.address.en;
+    document.getElementById('contactList').innerHTML = [
+      { icon: 'phone', label: D.contact.phone.label[lang], val: D.contact.phone.val, href: D.contact.phone.href },
+      { icon: 'mail', label: D.contact.email.label[lang], val: D.contact.email.val, href: D.contact.email.href },
+      { icon: 'chat', label: D.contact.wechat.label[lang], val: D.contact.wechat.val },
+      { icon: 'pin', label: D.contact.address.label[lang], val: addr }
+    ].map(function(it){
+      var valHtml = it.href ? '<a href="' + it.href + '">' + it.val + '</a>' : '<span>' + it.val + '</span>';
+      return '<div class="c-item">' + iconSvg(it.icon) + '<div><b>' + it.label + '</b>' + valHtml + '</div></div>';
+    }).join('');
+    var qrh = ct.qr;
+    document.getElementById('qrRow').innerHTML = [
+      { label: D.contact.wechat.label[lang], img: D.contact.wechat.qr, hint: qrh.wechat },
+      { label: D.contact.whatsapp.label[lang], img: D.contact.whatsapp.qr, hint: qrh.whatsapp },
+      { label: D.contact.facebook.label[lang], img: D.contact.facebook.qr, hint: qrh.facebook }
+    ].map(function(q){
+      return '<div class="qr-card"><img src="' + q.img + '" alt="' + q.label + '"><b>' + q.label + '</b><span>' + q.hint + '</span></div>';
+    }).join('');
+    document.getElementById('fNameLabel').textContent = ct.form.name;
+    document.getElementById('fName').placeholder = ct.form.namePh;
+    document.getElementById('fPhoneLabel').textContent = ct.form.phone;
+    document.getElementById('fPhone').placeholder = ct.form.phonePh;
+    document.getElementById('fTypeLabel').textContent = ct.form.type;
+    document.getElementById('fType').placeholder = ct.form.typePh;
+    document.getElementById('fMsgLabel').textContent = ct.form.msg;
+    document.getElementById('fMsg').placeholder = ct.form.msgPh;
+    document.getElementById('formSubmit').textContent = ct.form.submit;
+    document.getElementById('formNote').textContent = ct.form.note;
+
+    /* 页脚 */
+    var f = L('footer');
+    document.getElementById('footerDesc').textContent = f.desc;
+    document.getElementById('footCol1Title').textContent = f.colProducts;
+    document.getElementById('footCol1').innerHTML = f.products.map(function(x){ return '<li><a href="' + x.h + '">' + x.t + '</a></li>'; }).join('');
+    document.getElementById('footCol2Title').textContent = f.colNav;
+    document.getElementById('footCol2').innerHTML = f.nav.map(function(x){ return '<li><a href="' + x.h + '">' + x.t + '</a></li>'; }).join('');
+    document.getElementById('footContactTitle').textContent = D.contact.phone.label[lang];
+    document.getElementById('footPhone').textContent = D.contact.phone.label[lang] + '：' + D.contact.phone.val;
+    document.getElementById('footEmail').textContent = D.contact.email.label[lang] + '：' + D.contact.email.val;
+    document.getElementById('footWechat').textContent = D.contact.wechat.label[lang] + '：' + D.contact.wechat.val;
+    document.getElementById('footAddr').textContent = D.contact.address.label[lang] + '：' + addr;
+    document.getElementById('copyright').textContent = '© ' + new Date().getFullYear() + ' ' + f.copyright;
+    document.getElementById('footHint').textContent = lang === 'zh' ? '内容可在 window.SITE_DATA 数据区后台修改' : 'Editable via window.SITE_DATA';
+
+    document.title = (lang === 'zh' ? brandZh + ' ' + brandEn + ' · ' + h.titleA + ' ' + h.titleB : brandEn + ' · ' + h.titleA + ' ' + h.titleB);
+
+    /* 语言切换高亮 */
+    document.querySelectorAll('#langSwitch button').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-lang') === lang);
+    });
+  }
+
+  function renderProducts(){
+    var more = L('products').more;
+    var cats = D.cats[lang];
+    var list = D.products.filter(function(p){
+      if (prodFilter === 'all' || prodFilter === cats[0]) return true;
+      return p.cat[lang] === prodFilter;
+    });
+    document.getElementById('prodGrid').innerHTML = list.map(function(p){
+      return '<article class="prod-card">' +
+        '<div class="img"><span class="prod-cat">' + p.cat[lang] + '</span><img src="' + p.img + '" alt="' + p.name[lang] + '" loading="lazy"></div>' +
+        '<div class="prod-info"><h3>' + p.name[lang] + '</h3><p>' + p.desc[lang] + '</p>' +
+        '<span class="prod-more">' + more + arrowSvg() + '</span></div></article>';
+    }).join('');
+  }
+
+  /* 图标库 */
+  function arrowSvg(){
+    return '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  }
+  function iconSvg(name){
+    var paths = {
+      gem: '<path d="M12 2l3.5 6.5L22 9.5l-5 4.6 1.2 6.9L12 17.5 5.8 21l1.2-6.9-5-4.6 6.5-1z"/>',
+      bulb: '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/>',
+      ruler: '<path d="M2 12l10-10 10 10-10 10z M6 8l2 2 M10 4l2 2 M14 8l2 2 M18 12l2 2"/>',
+      shield: '<path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/>',
+      store: '<path d="M3 9l1.5-5h15L21 9M3 9a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 0 0M4 11v9h16v-9M9 20v-6h6v6"/>',
+      hotel: '<path d="M3 21V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16M3 21h18M7 7h2M7 11h2M7 15h2M15 7h2v14h-2z"/>',
+      office: '<path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M9 11h2M9 15h2M13 7h2M13 11h2M13 15h2"/>',
+      outdoor: '<path d="M12 3v18M4 7h16l-3 3M6 11h12l-3 3M9 15h6l-3 3M8 21h8"/>',
+      phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/>',
+      mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+      pin: '<path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+      chat: '<path d="M21 12a8 8 0 0 1-8 8H4l2-2a8 8 0 1 1 15-6z"/>'
+    };
+    return '<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (paths[name] || paths.bulb) + '</svg>';
+  }
+
+  /* 事件绑定（一次即可） */
+  document.getElementById('langSwitch').addEventListener('click', function(e){
+    var b = e.target.closest('button');
+    if (!b) return;
+    lang = b.getAttribute('data-lang');
+    render();
+  });
+  document.getElementById('catTabs').addEventListener('click', function(e){
+    var tab = e.target.closest('.cat-tab');
+    if (!tab) return;
+    prodFilter = tab.getAttribute('data-cat');
+    document.querySelectorAll('#catTabs .cat-tab').forEach(function(t){ t.classList.remove('on'); });
+    tab.classList.add('on');
+    renderProducts();
+  });
+  var toggle = document.getElementById('navToggle');
+  var linksBox = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = linksBox.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  linksBox.addEventListener('click', function(e){
+    if (e.target.tagName === 'A' && window.innerWidth <= 860) {
+      linksBox.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var note = document.getElementById('formNote');
+    var done = lang === 'zh' ? '已收到您的需求（演示）。正式上线前请配置提交方式。' : 'Inquiry received (demo). Configure submission before launch.';
+    note.textContent = done;
+    note.style.color = '#dcc08c';
+  });
+  document.getElementById('backTop').addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
+<!-- （注：内容由AI生成） -->
