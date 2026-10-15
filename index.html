@@ -380,7 +380,7 @@ window.SITE_DATA = {
       ] },
       contact: {
         eyebrow: "联系我们", title: "让我们为你的空间设计光", lead: "无论是一个门店的焕新，还是整体系列的落地，欢迎告诉我们你的照明需求，我们将在第一时间响应。",
-        form: { name: "您的称呼", namePh: "请输入称呼", phone: "联系电话", phonePh: "请输入手机号", type: "项目类型", typePh: "如：门店照明 / 酒店项目", msg: "需求描述", msgPh: "请简单描述您的项目与照明需求", submit: "提交需求", note: "演示表单，正式上线前请配置提交方式。" },
+        form: { name: "您的称呼", namePh: "请输入称呼", phone: "联系电话", phonePh: "请输入手机号", type: "项目类型", typePh: "如：门店照明 / 酒店项目", msg: "需求描述", msgPh: "请简单描述您的项目与照明需求", submit: "提交需求", note: "提交后将自动唤起邮件客户端发送询盘，我们将在1个工作日内回复。" },
         qr: { wechat: "微信扫码添加 Daji931", whatsapp: "WhatsApp 扫码咨询", facebook: "Facebook 扫码关注" }
       },
       footer: {
@@ -436,7 +436,7 @@ window.SITE_DATA = {
       ] },
       contact: {
         eyebrow: "Contact Us", title: "Let Us Design Light for Your Space", lead: "Whether it's a single store refresh or a full rollout, tell us your lighting needs — we'll respond promptly.",
-        form: { name: "Your Name", namePh: "Enter your name", phone: "Phone", phonePh: "Enter your phone", type: "Project Type", typePh: "e.g. store / hotel project", msg: "Requirement", msgPh: "Briefly describe your project and lighting needs", submit: "Submit Inquiry", note: "Demo form — configure the submission method before launch." },
+        form: { name: "Your Name", namePh: "Enter your name", phone: "Phone", phonePh: "Enter your phone", type: "Project Type", typePh: "e.g. store / hotel project", msg: "Requirement", msgPh: "Briefly describe your project and lighting needs", submit: "Submit Inquiry", note: "After submission, your mail client will open to send the inquiry, and we will reply within 1 business day." },
         qr: { wechat: "Scan to add on WeChat", whatsapp: "Scan to chat on WhatsApp", facebook: "Scan to follow on Facebook" }
       },
       footer: {
@@ -958,9 +958,30 @@ window.SITE_DATA = {
   document.getElementById('contactForm').addEventListener('submit', function(e){
     e.preventDefault();
     var note = document.getElementById('formNote');
-    var done = lang === 'zh' ? '已收到您的需求（演示）。正式上线前请配置提交方式。' : 'Inquiry received (demo). Configure submission before launch.';
-    note.textContent = done;
-    note.style.color = '#dcc08c';
+    var name = document.getElementById('fName').value.trim();
+    var phone = document.getElementById('fPhone').value.trim();
+    var type = document.getElementById('fType').value.trim();
+    var msg = document.getElementById('fMsg').value.trim();
+    if (!name) {
+      note.textContent = lang === 'zh' ? '请填写您的称呼' : 'Please enter your name';
+      note.style.color = '#ff8a8a';
+      return;
+    }
+    if (!/^1\d{10}$/.test(phone)) {
+      note.textContent = lang === 'zh' ? '请填写正确的11位手机号' : 'Please enter a valid 11-digit phone number';
+      note.style.color = '#ff8a8a';
+      return;
+    }
+    var subject = encodeURIComponent(lang === 'zh' ? '官网询盘：' + name : 'Website Inquiry from ' + name);
+    var body = encodeURIComponent(
+      (lang === 'zh' ? '您的称呼：' : 'Name: ') + name + '\n' +
+      (lang === 'zh' ? '联系电话：' : 'Phone: ') + phone + '\n' +
+      (lang === 'zh' ? '项目类型：' : 'Project Type: ') + type + '\n\n' +
+      (lang === 'zh' ? '需求描述：' : 'Requirement: ') + msg
+    );
+    window.location.href = 'mailto:info@DLED.CC?subject=' + subject + '&body=' + body;
+    note.textContent = lang === 'zh' ? '✅ 提交成功！已自动唤起邮件客户端，发送询盘即可收到我们的回复。也可直接添加右侧微信/WhatsApp快速咨询。' : '✅ Submitted! Your mail client will open to send the inquiry. You can also add our WeChat/WhatsApp for faster response.';
+    note.style.color = '#7fd19a';
   });
   document.getElementById('backTop').addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
